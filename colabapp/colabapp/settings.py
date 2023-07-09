@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-9-0&rnu1uqv@@wn^6b&!-jji6q2a%i1w70bop7^8ke*d=!s$la
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-X_FRAME_OPTIONS = '*'
+
 
 # Application definition
 
@@ -120,9 +120,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIR = [os.path.join(BASE_DIR, "colabapp/statics")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "colabapp/static")]
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

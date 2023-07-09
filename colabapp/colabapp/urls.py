@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from academy.views import v_index
 
+
 urlpatterns = [
     path('',  v_index),
     path('admin/', admin.site.urls),
