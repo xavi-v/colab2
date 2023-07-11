@@ -8,3 +8,6 @@ def v_index(request):
     #enlaza view con html
     
   
+def v_course(request):
+    context = {}
+    return render(request, 'course.html', context)
