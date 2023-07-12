@@ -89,3 +89,4 @@ class Command(BaseCommand):
             Teacher.objects.all().delete()
 
         
+
