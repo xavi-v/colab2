@@ -122,7 +122,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "colabapp/static")]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-xaviv-colab2-h52zp9s2yng.ws-us101.gitpod.io']
+CSRF_TRUSTED_ORIGINS = [os.environ.get("GITPOD_WORKSPACE_URL", "").replace("https://", "https://8000-")]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
