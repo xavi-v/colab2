@@ -8,7 +8,14 @@
                         <h2 class="text-white mt-0">{{ course.name}}</h2>
                         <hr class="divider divider-light" />
                         <p class="text-white-75 mb-4">{{ course.description}}</p>
-                        <a class="btn btn-light btn-xl" href="/academy/course/{{ course.id }}/subscribe">Inscribete</a>
+                        {% if subscribed %}
+                            <p class="text-white-75 mb-4">Guia: {{ subs.teacher.first_name }} {{ subs.teacher.last_name }} </p>
+                            <a class="btn btn-secondary btn-xl" href="#">Ir a Training</a>
+                        {% else %}
+                            <a class="btn btn-light btn-xl"
+                                href="/academy/course/{{ course.id }}/subscribe">Enrolate! </a>
+                        {% endif %}
+
                         {% for message in messages %}
                             {% if message.tags == "success" %}
                             <div class="alert alert-warning alert-dismissible fade show" role="alert">{{ message }}
